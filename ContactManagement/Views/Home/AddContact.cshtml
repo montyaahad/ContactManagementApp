@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "Add Contact";
+}
+
+<div class="contact-wrap">
+    <nav class="contact-nav">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-book"></span> Contact List</a></li>
+            <li><a href="search.html"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+        </ul>
+    </nav>
+    <section class="contact-body box-left visible">
+        <div class="vbox">
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <article class="contact-list contact-content has-aside">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title" id="A">A</h5>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="list-group">
+                                       
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <nav>
+                                        <ul class="pagination pagination-sm">
+                                            <li>
+                                                <a href="#" aria-label="Previous">
+                                                    <span>&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                                <a href="#" aria-label="Next">
+                                                    <span>&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </article>
+                        <aside class="contact-index contact-content">
+                            <ul class="list-unstyled text-center text-bold">
+                                <li><a href="index.html" class="text-muted">#</a></li>
+                                <li><a href="index.html" class="text-strong">A</a></li>
+                                <li><a href="#B" class="text-muted">B</a></li>
+                                <li><a href="con-C.html" class="text-strong">C</a></li>
+                                <li><a href="con-D.html" class="text-strong">D</a></li>
+                                <li><a href="con-E.html" class="text-strong">E</a></li>
+                                <li><a href="#F" class="text-muted">F</a></li>
+                                <li><a href="#G" class="text-muted">G</a></li>
+                                <li><a href="#H" class="text-muted">H</a></li>
+                                <li><a href="#I" class="text-muted">I</a></li>
+                                <li><a href="#J" class="text-muted">J</a></li>
+                                <li><a href="#K" class="text-muted">K</a></li>
+                                <li><a href="#L" class="text-muted">L</a></li>
+                                <li><a href="con-M.html" class="text-strong">M</a></li>
+                                <li><a href="#N" class="text-muted">N</a></li>
+                                <li><a href="#O" class="text-muted">O</a></li>
+                                <li><a href="#P" class="text-muted">P</a></li>
+                                <li><a href="#Q" class="text-muted">Q</a></li>
+                                <li><a href="#R" class="text-muted">R</a></li>
+                                <li><a href="#S" class="text-muted">S</a></li>
+                                <li><a href="#T" class="text-muted">T</a></li>
+                                <li><a href="#U" class="text-muted">U</a></li>
+                                <li><a href="#V" class="text-muted">V</a></li>
+                                <li><a href="#W" class="text-muted">W</a></li>
+                                <li><a href="#X" class="text-muted">X</a></li>
+                                <li><a href="#Y" class="text-muted">Y</a></li>
+                                <li><a href="#Z" class="text-muted">Z</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default btn-lg btn-block" onclick="changeClasses(); toggleClass()">
+                <span class="glyphicon glyphicon-plus-sign"></span> Add new contact
+            </button>
+        </div>
+    </section>
+    <section class="contact-body box-right">
+        <div class="vbox">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid data-read">
+                    <div class="navbar-header">
+                        <a href="javascript:void" onclick="changeClasses()" class="navbar-brand"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <span class="navbar-brand">A.John Doe</span>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0)" onclick="changeClasses()"><span class="glyphicon glyphicon-remove-circle"></span> Delete</a></li>
+                        <li><a href="javascript:void(0)" onclick="toggleClass()"><span class="glyphicon glyphicon-edit"></span> Edit</a></li>
+                    </ul>
+                </div>
+                <div class="container-fluid data-input hide">
+                    <div class="navbar-header">
+                        <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                            <a href="javascript:void(0)" onclick="changeClasses(); toggleClass()" class="btn btn-default" role="button"><span class="glyphicon glyphicon-remove"></span> Cancel</a>
+                            <a href="javascript:void(0)" onclick="toggleClass()" class="btn btn-default" role="button"><span class="glyphicon glyphicon-ok"></span> Done</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <form class="contact-list contact-content">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <div class="data-input hide">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="data-read">
+                                    <p>A.John Doe</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <div class="data-input hide">
+                                    <input type="text" class="form-control" placeholder="Phone">
+                                </div>
+                                <div class="data-read">
+                                    <p><a href="tel:01888888888">01888888888</a></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <div class="data-input hide">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="data-read">
+                                    <p><a href="mailto:john.doe@email">john.doe@email</a></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Organization</label>
+                                <div class="data-input hide">
+                                    <input type="text" class="form-control" placeholder="Company">
+                                    <input type="text" class="form-control" placeholder="Title">
+                                </div>
+                                <div class="data-read">
+                                    <div>SELISE</div>
+                                    <p class="text-muted">Front End Developer</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Address</label>
+                                <div class="data-input hide">
+                                    <input type="email" class="form-control" placeholder="House">
+                                    <input type="text" class="form-control" placeholder="Street">
+                                    <input type="text" class="form-control" placeholder="PO box">
+                                    <input type="text" class="form-control" placeholder="City">
+                                    <input type="text" class="form-control" placeholder="ZIP code">
+                                </div>
+                                <div class="data-read">
+                                    <div>15/A</div>
+                                    <div>Road 16, Dhanmondi</div>
+                                    <div>Dhaka</div>
+                                    <div>1207</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

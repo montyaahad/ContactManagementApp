@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="contact-wrap">
+    <nav class="contact-nav">
+        <ul class="nav nav-tabs nav-justified">
+            <li><a href="/Home/Index"><span class="glyphicon glyphicon-book"></span> Contact List</a></li>
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+        </ul>
+    </nav>
+    <section class="contact-body box-left visible">
+        <div class="vbox">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        @*<form role="search">*@
+                            <div class="input-group">
+                                <input type="text" id="idSearchText" class="form-control" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <input class="btn btn-default" id="btnSearch" type="submit" value="Go!" />
+                                </span>
+                            </div>
+                        @*</form>*@
+                    </div>
+                </div>
+            </nav>
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <article class="contact-list contact-content">
+                            <div class="list-group" id="idContactList">
+
+                                @*<a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">A. John Doe</h4>
+                                    <p class="list-group-item-text text-muted">01888888888</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">A. John Doe</h4>
+                                    <p class="list-group-item-text text-muted">01888888888</p>
+                                </a>*@
+
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default btn-lg btn-block" onclick="changeClasses(); toggleClass()">
+                <span class="glyphicon glyphicon-plus-sign"></span> Add new contact
+            </button>
+        </div>
+
+
+    </section>
+    <section class="contact-body box-right">
+        <div class="vbox">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid data-read">
+                    <div class="navbar-header">
+                        <a href="javascript:void" onclick="changeClasses()" class="navbar-brand"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <span class="navbar-brand">A.John Doe</span>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0)" onclick="changeClasses()"><span class="glyphicon glyphicon-remove-circle"></span> Delete</a></li>
+                        <li><a href="javascript:void(0)" onclick="toggleClass()"><span class="glyphicon glyphicon-edit"></span> Edit</a></li>
+                    </ul>
+                </div>
+                <div class="container-fluid data-input hide">
+                    <div class="navbar-header">
+                        <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                            <a href="javascript:void(0)" onclick="changeClasses(); toggleClass()" class="btn btn-default" role="button"><span class="glyphicon glyphicon-remove"></span> Cancel</a>
+                            <a href="javascript:void(0)" onclick="toggleClass()" class="btn btn-default" role="button"><span class="glyphicon glyphicon-ok"></span> Done</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <form class="contact-list contact-content">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <div class="data-input hide">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="data-read">
+                                    <p>A.John Doe</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <div class="data-input hide">
+                                    <input type="text" class="form-control" placeholder="Phone">
+                                </div>
+                                <div class="data-read">
+                                    <p><a href="tel:01888888888">01888888888</a></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <div class="data-input hide">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="data-read">
+                                    <p><a href="mailto:john.doe@email">john.doe@email</a></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Organization</label>
+                                <div class="data-input hide">
+                                    <input type="text" class="form-control" placeholder="Company">
+                                    <input type="text" class="form-control" placeholder="Title">
+                                </div>
+                                <div class="data-read">
+                                    <div>SELISE</div>
+                                    <p class="text-muted">Front End Developer</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Address</label>
+                                <div class="data-input hide">
+                                    <input type="email" class="form-control" placeholder="House">
+                                    <input type="text" class="form-control" placeholder="Street">
+                                    <input type="text" class="form-control" placeholder="PO box">
+                                    <input type="text" class="form-control" placeholder="City">
+                                    <input type="text" class="form-control" placeholder="ZIP code">
+                                </div>
+                                <div class="data-read">
+                                    <div>15/A</div>
+                                    <div>Road 16, Dhanmondi</div>
+                                    <div>Dhaka</div>
+                                    <div>1207</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Custom/contact.search.js"></script>
+}
